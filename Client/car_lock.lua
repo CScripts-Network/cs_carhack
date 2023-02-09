@@ -1,0 +1,5 @@
+RegisterNetEvent('d_carhack:hack2')
+AddEventHandler('d_carhack:hack2', function(closestveh)
+		TriggerEvent("ls:newVehicle", closestveh, GetVehicleNumberPlateText(closestveh), GetVehicleDoorLockStatus(closestveh))
+        	TriggerServerEvent("ls:addOwner", GetVehicleDoorLockStatus(closestveh))
+end)
